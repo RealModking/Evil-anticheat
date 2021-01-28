@@ -1,0 +1,31 @@
+body {
+  	background-color: black;
+}
+
+center {
+	color: lightblue;
+  	center: 30px;
+	font-size : 30;
+}
+
+h1{
+	margin-left: 900;
+  	font : normal;
+  	color: lightblue;
+  	center: 30px;
+	font-size : 30;
+}
+
+a{
+	margin-left: 900;
+	color: green;
+	center: 30px;
+	quotes : '\201C' '\201D' '\2018' '\2019';
+}
+
+
+
+
+
+
+color: white;
